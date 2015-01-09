@@ -75,7 +75,7 @@ function u2f_settings_init() {
 function u2f_appId_render() { 
   $options = get_option('u2f_settings');
 ?>
-  <input type='text' name='u2f_settings[appId]' value='<?php echo $options['appId']; ?>' class="regular-text code">
+  <input type='text' name='u2f_settings[appId]' value='<?php echo esc_attr($options['appId']); ?>' class="regular-text code">
 <?php
 }
 
@@ -83,7 +83,7 @@ function u2f_appId_render() {
 function u2f_val_attestDir_render() { 
   $options = get_option('u2f_settings');
 ?>
-  <input type='text' name='u2f_settings[attestDir]' value='<?php echo $options['attestDir']; ?>' class="regular-text">
+  <input type='text' name='u2f_settings[attestDir]' value='<?php echo esc_attr($options['attestDir']); ?>' class="regular-text">
   <?php
 }
 
